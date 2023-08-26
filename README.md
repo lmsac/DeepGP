@@ -2,7 +2,7 @@
 DeepGP will be publicly available upon its publication. 
 # Tutorial
 ## User Guide
-For detailed step-by-step instructions on how to get started with DeepGP, please refer to [User Guide](https://github.com/yuz2011/DeepGP/blob/main/User_guide.md) available in the [main folder](https://github.com/yuz2011/DeepGP/blob/main/).
+For detailed step-by-step instructions on how to get started with DeepGP, please refer to [User Guide]() available in the [main folder]().
 
 ## What's Inside User Guide.docx
 
