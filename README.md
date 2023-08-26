@@ -31,9 +31,11 @@ human&mouse: This is the DeepGP model for spectra prediction trained with both h
 
 mouse_rt: The is the DeepGP model for retention time prediction trained with mouse datasets, built on top of the DeepFLR base model.
 
-For further details, please refer to the User Guide.docx.
+For further details, please refer to the User Guide.
 
 # Demo data 2
 The demo data for iRT prediction is available at the [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k). The demo data will also be made publicly accessible on the GitHub 'Releases' page.
 
 This demo data is for clear and comprehensive presentation of iRT pre-processing, calibration, model training, and prediction. It includes three relatively large mouse datasets.
+
+For further details, please refer to the User Guide.
