@@ -17,7 +17,7 @@ Demo Data Description: Detailed description of the demo data.
 Step-by-Step Instructions: Comprehensive guide to help you run and understand DeepGP.
 
 # Model
-The model is available at the [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q). The model will be publicly available at Github release page upon its publication.
+The model is available at the [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q). Upon official publication, the model will also be made publicly accessible on the GitHub 'Releases' page.
 
 Here are the trained DeepGP models. These models are organized into five subfolders, each denoted by the following names: DeepFLR, human, mouse, human&mouse and mouse_rt.
 
@@ -34,6 +34,6 @@ mouse_rt: The is the DeepGP model for retention time prediction trained with mou
 For further details, please refer to the User Guide.docx.
 
 # Demo data 2
-The demo data for iRT prediction is available at the [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k). The model will be publicly available at Github release page upon its publication.
+The demo data for iRT prediction is available at the [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k). The demo data will also be made publicly accessible on the GitHub 'Releases' page.
 
-This demo data is for clear and comprehensive presentation for a clear and comprehensive presentation of iRT pre-processing, calibration, model training, and prediction. It includes three relatively large mouse datasets.
+This demo data is for clear and comprehensive presentation of iRT pre-processing, calibration, model training, and prediction. It includes three relatively large mouse datasets.
