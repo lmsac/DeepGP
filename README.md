@@ -19,7 +19,7 @@ Step-by-Step Instructions: Comprehensive guide to help you run and understand De
 # Model
 The model is available at the [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q). Upon official publication, the model will also be made publicly accessible on the GitHub 'Releases' page.
 
-Here are the trained DeepGP models. These models are organized into five subfolders, each denoted by the following names: DeepFLR, human, mouse, human&mouse and mouse_rt.
+Here are the trained DeepGP models. These models are organized into five files, each denoted by the following names: DeepFLR, human, mouse, human&mouse and mouse_rt.
 
 DeepFLR: This is the base model.
 
