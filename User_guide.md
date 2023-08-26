@@ -43,6 +43,7 @@ These scripts are executed in a command-line interface. Advanced users can also 
 ### Glycopeptide MS/MS spectra: pre-processing, training, and prediction
 (1)	Entry to the folder including DeepGP code files.
 Users can navigate to the relevant folder using a command such as cd D:\DeepGP_code. The path “D:\DeepGP_code” signifies the directory containing the Python scripts for DeepGP.
+
 (2)	Pre-processing: Convert the library search results (.txt) and experimental glycopeptide spectra (.mgf) into files containing spectral data (.csv).
 
 ```
