@@ -44,7 +44,8 @@ These scripts are executed in a command-line interface. Advanced users can also 
 Users can navigate to the relevant folder using a command such as cd D:\DeepGP_code. The path “D:\DeepGP_code” signifies the directory containing the Python scripts for DeepGP.
 (2)	Pre-processing: Convert the library search results (.txt) and experimental glycopeptide spectra (.mgf) into files containing spectral data (.csv).
 
-```python 1_dataset_format.py --datafold D:/DeepGP_code/demo_data/human/demo/ --dfname pGlycoDB-GP-FDR-Pro_demo.txt --mgfdatafold MSConvert_mgf_demo --output_name demo_data_1st.csv --dup Drop_duplicated
+```
+python 1_dataset_format.py --datafold D:/DeepGP_code/demo_data/human/demo/ --dfname pGlycoDB-GP-FDR-Pro_demo.txt --mgfdatafold MSConvert_mgf_demo --output_name demo_data_1st.csv --dup Drop_duplicated
 ```
 
 The description of the parameters of the command line:
@@ -65,7 +66,8 @@ The description of the parameters of the command line:
 For ease of use, users have the option to utilize our provided trained model for immediate testing, thereby bypassing the model training phase. The trained model can be accessed directly from [DeepGP GitHub Release Page] (https://github.com/lmsac/DeepGP/releases/).
 For those with access to other datasets, model training can also be conducted using your own datasets or extensive datasets downloaded from public databases. This provides more flexibility and customization, allowing the model to better adapt to various types of data.
 
-```python 2_train_byBY.py --task_name demo --folder_path D:/DeepGP_code/demo_data/ --organism human --pattern *_data_1st.csv --trainpathcsv demo/train_combine.csv --ms2_method cos_sqrt --model_ablation DeepFLR --DeepFLR_modelpath D:/DeepGP_code/model/DeepFLR/best__2deepchargeModelms2_bert_mediancos_2021-09-20-01-17-50-729399
+```
+python 2_train_byBY.py --task_name demo --folder_path D:/DeepGP_code/demo_data/ --organism human --pattern *_data_1st.csv --trainpathcsv demo/train_combine.csv --ms2_method cos_sqrt --model_ablation DeepFLR --DeepFLR_modelpath D:/DeepGP_code/model/DeepFLR/best__2deepchargeModelms2_bert_mediancos_2021-09-20-01-17-50-729399
 ```
 
 The description of the parameters of the command line:
@@ -96,7 +98,8 @@ Advanced users can also adjust the settings available in the code’s utilities 
 We highly recommend training DeepGP using larger datasets. The demo dataset provided contains only 40 unique spectra. While the code can be successfully implemented with this dataset, it is not large enough to effectively train a model. Therefore, for optimal performance and accuracy, consider using larger datasets.
 
 (4)	Prediction: Predict MS/MS glycopeptide spectra with trained model
-```python 3_replace_predict_byBY.py --trainpathcsv D:/DeepGP_code/demo_data/human/demo/demo_data_1st.csv --datafold D:/DeepGP_code/demo_data/human/demo/ --bestmodelpath D:/DeepGP_code/model/human/2023-06-25-18-00-35-186908/epoch-147_step-28224_mediancos-0.938205.pt --savename demo --ms2_method cos_sqrt --postprocessing off
+```
+python 3_replace_predict_byBY.py --trainpathcsv D:/DeepGP_code/demo_data/human/demo/demo_data_1st.csv --datafold D:/DeepGP_code/demo_data/human/demo/ --bestmodelpath D:/DeepGP_code/model/human/2023-06-25-18-00-35-186908/epoch-147_step-28224_mediancos-0.938205.pt --savename demo --ms2_method cos_sqrt --postprocessing off
 ```
 The description of the parameters of the command line:
 
@@ -120,14 +123,16 @@ It takes less than 2 seconds to predict 40 spectra on a single RTX 3090 GPU.
 (1)	Pre-processing 
 Pre-processing code is the same for the MS/MS prediction.
 For the RT calibration process, which should be carried out on multiple datasets, we provide three mouse datasets as examples. The large demo data corresponding to these examples has been uploaded to [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/). You can use these datasets as a reference for your own iRT process.
-```python 1_dataset_format.py --datafold D:/DeepGP_code/data/mouse/PXD005411/ --dfname pGlycoDB-GP-FDR-Pro_PXD005411.txt --mgfdatafold MSConvert_mgf_PXD005411 --output_name PXD005411_MouseBrain_rt_1st.csv  --dup Drop_duplicated  --mgfsourceorign MsConvert
+```
+python 1_dataset_format.py --datafold D:/DeepGP_code/data/mouse/PXD005411/ --dfname pGlycoDB-GP-FDR-Pro_PXD005411.txt --mgfdatafold MSConvert_mgf_PXD005411 --output_name PXD005411_MouseBrain_rt_1st.csv  --dup Drop_duplicated  --mgfsourceorign MsConvert
 ```
 
 The parameters are the same as aforementioned.
 
 (2)	RT calibration: Calibrate the retention time using LOWESS based on one dataset.
 
-```python 1_rt_calibration.py --pattern *_rt_1st.csv --Cali_csv D:/DeepGP_code/data/mouse/PXD005411/PXD005411_MouseBrain_rt_1st.csv  --folder_path D:/DeepGP_code/data/mouse/  --output_name  All_adjust_irt.csv
+```
+python 1_rt_calibration.py --pattern *_rt_1st.csv --Cali_csv D:/DeepGP_code/data/mouse/PXD005411/PXD005411_MouseBrain_rt_1st.csv  --folder_path D:/DeepGP_code/data/mouse/  --output_name  All_adjust_irt.csv
 ```
 The description of the parameters of the command line:
 
@@ -146,7 +151,8 @@ Note: For each input file, a corresponding output file with the calibrated reten
 
 For ease of use, users have the option to utilize our provided trained model for immediate testing, thereby bypassing the model training phase. The trained model can be accessed directly from [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/).
 
-```python 2_train_rt.py  --irt yes  --irt_csv D:/DeepGP_code/data/mouse/All_adjust_irt.csv  --task_name demo_rt --folder_path D:/DeepGP_code/data/mouse/  --pattern *_rt_1st.csv --testdata PXD005411  --device 0  --trainpathcsv mouse_train_irt_1st_combine.csv  --model_ablation DeepFLR --DeepFLR_modelpath    D:/DeepGP_code/model/DeepFLR/best__2deepchargeModelms2_bert_mediancos_2021-09-20-01-17-50-729399
+```
+python 2_train_rt.py  --irt yes  --irt_csv D:/DeepGP_code/data/mouse/All_adjust_irt.csv  --task_name demo_rt --folder_path D:/DeepGP_code/data/mouse/  --pattern *_rt_1st.csv --testdata PXD005411  --device 0  --trainpathcsv mouse_train_irt_1st_combine.csv  --model_ablation DeepFLR --DeepFLR_modelpath    D:/DeepGP_code/model/DeepFLR/best__2deepchargeModelms2_bert_mediancos_2021-09-20-01-17-50-729399
 ```
 
 The description of the parameters of the command line:
@@ -160,7 +166,8 @@ Other parameters are the same as those used in 2_train_byBY.py.
 
 (3) Model testing
 
-```python 3_replace_predict_rt.py  --datafold D:/DeepGP_code/data/mouse/PXD005411/  --trainpathcsv D:/DeepGP_code/data/mouse/PXD005411/PXD005411_MouseBrain_rt_1st.csv --device 1   --bestmodelpath D:/DeepGP_code/model/mouse_rt/2023-07-14-11-10-12-102196/epoch-48_step-13536_r2-0.954393.pt --savename test_irt_adjust_PXD005411
+```
+python 3_replace_predict_rt.py  --datafold D:/DeepGP_code/data/mouse/PXD005411/  --trainpathcsv D:/DeepGP_code/data/mouse/PXD005411/PXD005411_MouseBrain_rt_1st.csv --device 1   --bestmodelpath D:/DeepGP_code/model/mouse_rt/2023-07-14-11-10-12-102196/epoch-48_step-13536_r2-0.954393.pt --savename test_irt_adjust_PXD005411
 ```
 
 The description of the parameters for the command line is consistent with those used in `3_replace_predict_byBY.py`.
