@@ -5,26 +5,10 @@ Source of mass values from:
 http://web.expasy.org/findmod/findmod_masses.html
 """
 
-#我需要知道那些支链也碎的mz，所以我需要知道怎么表明立体结构,以糖所处的位置为糖峰标号，新糖峰标记，比如以前的BY无法标支链碎裂峰，现在以糖来做下标
-#pglyco结构转换为图结构
-#可以做ficharge到percursor charge，丢水，丢NH3， ？三电荷的碎片有吗，我有看过，那还是保留吧   谱图预测可以快速匹配大量碎片
-#对于糖来说，如果对称糖结构，那么不同的来源会有相同的mz，出现在一个峰上,可能只能强度平分
-#所有的函数都汇聚在pepfragmass（）函数了，可以只用那个函数
-#HCD 碎裂，by离子会把糖也全部丢掉，而且只碎糖的时候也会碎裂多根键 找一下HCD碎裂的诊断离子表
-#所有可能的糖结构，需要能做成可以理解的模式。
-# 。其实还是需要考虑一下，为什么要做谱图搜索，对于算法而言，糖产生一些细小的结构改变，只是去做一些分析。但是对谱图预测而言，需要重新去预测。那我现在最多只能拿已有的糖去做谱图预测。
-#IgG每个位点有的糖就那么几十种，实在不行可以按照那个来。
-#糖的峰要慢慢check，注意一下mz
-#单糖可以通过多步反应，掉中间那个，可以不预测，只作为诊断离子，HCD模式如何计算碎裂多次
-#用ETD模式，CID模式，和HCD模式，依次测试
-#可以结合sequence searching 和spectral searching，先匹配预测的mz，再匹配预测的强度
-#搜索做断两次+单糖+丢Fuc，预测做丢一次+丢Fuc
-#有不同的碎裂模式，不同的碎裂模式要用相应的谱图验证
 import re
 import copy
 import dgl
 import torch
-import ipdb
 # --------------------------- Other masses ----------------------------#
 # http://www.sisweb.com/referenc/source/exactmas.htm
 MASS = {}
