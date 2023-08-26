@@ -6,8 +6,6 @@ import numpy as np
 # import argparse
 # import json
 import torch
-# import masses
-import ipdb
 # --------------------------- mgf processing ------------------------------#
 def mgf_process(mgfdatafold:str,sourceorign:str):
     """Turn mgf to json.
