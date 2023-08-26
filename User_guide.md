@@ -2,7 +2,7 @@
 ## Requirements and installation
 
 DeepGP was performed using python (3.8.3, Anaconda distribution version 5.3.1, https://www.anaconda.com/) with the following packages: 
-FastNLP (0.6.0), pytorch (1.10.0), torchinfo (1.7.1), transformers (4.12.5), dgl (1.0.1), bidict (0.22.0), pandas (1.0.5) and numpy (1.18.5).
+FastNLP (0.6.0), pytorch (1.10.0), torchinfo (1.7.1), transformers (4.12.5), dgl (1.0.1), bidict (0.22.0), pandas (1.0.5), numpy (1.18.5) and pyteomics (4.4.2).
 Install these packages by using “pip install” command:
 ```pip install fastNLP==0.6.0
 pip install torch==1.10.0
@@ -12,6 +12,7 @@ pip install dgl==1.0.1
 pip install bidict==0.22.0
 pip install pandas==1.0.5
 pip install numpy==1.18.5
+pip install pyteomics==4.4.2
 ```
 Installing a specific package generally takes a few minutes on a normal desktop. Once the library is installed, you can verify the installation by importing the library in Python and checking the version number:
 ```
