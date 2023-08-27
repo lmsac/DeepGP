@@ -10,7 +10,6 @@ from fastNLP.core.metrics import MetricBase,seq_len_to_mask
 from fastNLP.core.losses import LossBase
 from preprocess import NPPeptidePipe,PPeptidePipe
 from torch.nn import CosineSimilarity
-import ipdb
 from utils import *
 from sklearn.metrics import r2_score
 def set_seed(seed):
