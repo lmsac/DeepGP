@@ -103,7 +103,7 @@ We highly recommend training DeepGP using larger datasets. The demo dataset prov
 
 (4)	Prediction: Predict MS/MS glycopeptide spectra with trained model
 ```
-python 3_replace_predict_byBY.py --trainpathcsv D:/DeepGP_code/demo_data/human/demo/demo_data_1st.csv --datafold D:/DeepGP_code/demo_data/human/demo/ --bestmodelpath D:/DeepGP_code/model/human/2023-06-25-18-00-35-186908/epoch-147_step-28224_mediancos-0.938205.pt --savename demo --ms2_method cos_sqrt --postprocessing off
+python 3_replace_predict_byBY.py --trainpathcsv D:/DeepGP_code/demo_data/human/demo/demo_data_1st.csv --datafold D:/DeepGP_code/demo_data/human/demo/ --bestmodelpath D:/DeepGP_code/model/human/2023-06-25-18-00-35-186908/epoch-147_step-28224_mediancos-0.938205.pt --savename demo --ms2_method cos --postprocessing off
 ```
 The description of the parameters of the command line:
 
@@ -117,12 +117,13 @@ The description of the parameters of the command line:
 
 `--savename`: This parameter provides the prefix for the output file names.
 
-`--ms2_method`: This parameter decides the metric used for DeepGP. Options include “cos_sqrt”, “cos”, and “pcc”. These represent cosine similarity with a square root transformation, cosine similarity, and Pearson correlation coefficient, respectively.
+`--ms2_method`: This parameter decides the metric used for DeepGP. Options include “cos_sqrt”, “cos”, and “pcc”. These represent cosine similarity with a square root transformation, cosine similarity, and Pearson correlation coefficient, respectively. The default is: "cos_sqrt".
 
 `--postprocessing`: This parameter determines whether post-processing is required (“on/off”). If set to “on”, the output will include files containing all predicted fragments and their corresponding intensities, along with all experimental fragments and their intensities.
 
 We have uploaded this trained model to [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q) and the model will also be made publicly accessible [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/). These models are labeled as “human”, “mouse”, and “human&mouse”. The “human” model was trained using human datasets, “mouse” was trained with mouse datasets, and “human&mouse” was trained using a combination of both human and mouse datasets.
-It takes less than 2 seconds to predict 40 spectra on a single RTX 3090 GPU.
+
+It takes about 1 second to predict 40 spectra on a single RTX 3090 GPU. The median cosine similarity between the predicted spectra and experimental spectra is 0.97.
 ### Glycopeptide iRT: pre-processing, calibration, training, and prediction
 (1)	Pre-processing 
 Pre-processing code is the same for the MS/MS prediction.
