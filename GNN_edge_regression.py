@@ -6,11 +6,6 @@ from dgl.nn.pytorch.conv import GINConv,GATConv,GraphConv
 # from dgl.nn.pytorch.conv import GraphConv
 from dgl.nn.pytorch.glob import SumPooling
 from utils import *
-import ipdb
-#因为要做全局表示，就没有训练，可以加上COMPLEX,HYBRID之类的label，做分类任务
-#numberofglycos不用特别大
-#GNN_ablation:GAT GCN GIN
-#从单向图改成双向图 引入对于P的影响
 class MLP(nn.Module):
     """Construct two-layer MLP-type aggreator for GIN model"""
 
