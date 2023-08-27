@@ -1,8 +1,5 @@
-#对预测得到的结果转化为谱图的形式
-#目前改了by和BY，exp暂时还没改
 import pandas as pd
 import numpy as np
-import ipdb
 from utils import *
 import torch
 import masses
