@@ -199,7 +199,6 @@ from fastNLP import Trainer
 
 if vocab_save:
     vocab.save(os.path.join(save_path,"vocab"))
-import ipdb
 pptrainer=Trainer(model=deepms2,    train_data=traindata,
                     device=device,  dev_data=devdata,
                 save_path=save_path,
