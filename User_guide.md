@@ -2,7 +2,7 @@
 ## Requirements and installation
 
 DeepGP was performed using python (3.8.3, Anaconda distribution version 5.3.1, https://www.anaconda.com/) with the following packages: 
-FastNLP (0.6.0), pytorch (1.10.0), torchinfo (1.7.1), transformers (4.12.5), dgl (1.0.1), bidict (0.22.0), pandas (1.0.5), numpy (1.18.5) and pyteomics (4.4.2).
+FastNLP (0.6.0), pytorch (1.10.0), torchinfo (1.7.1), transformers (4.12.5), dgl (1.0.1), bidict (0.22.0), pandas (1.0.5), numpy (1.18.5), pyteomics (4.4.2) and sklearn (0.24.2).
 Install these packages by using “pip install” command:
 ```pip install fastNLP==0.6.0
 pip install torch==1.10.0
@@ -13,6 +13,7 @@ pip install bidict==0.22.0
 pip install pandas==1.0.5
 pip install numpy==1.18.5
 pip install pyteomics==4.4.2
+pip install scikit-learn==0.24.2
 ```
 Installing a specific package generally takes a few minutes on a normal desktop. Once the library is installed, you can verify the installation by importing the library in Python and checking the version number:
 ```
@@ -83,9 +84,9 @@ The description of the parameters of the command line:
 
 `--pattern`: This parameter denotes the suffix for the training datasets. Files bearing this suffix within the folder name will be employed as training datasets.
 
-`--testdata`: This parameter indicates the test data. Files containing the term “testdata” will be omitted from the training files and reserved for further testing. The default is “alltest”.
+`--testdata`: This parameter indicates the test data. If any files within the specified directory contain this keyword in their names, they will be excluded from the training set and set aside for testing purposes. If no file contains the term, all will be used for training. The default is “alltest”.
 
-`--trainpathcsv`: This parameter represents the output file name for the training datasets. All files within the folder with a specific suffix are combined, processed, and output with this filename.
+`--trainpathcsv`: This parameter denotes the output filename for the processed training data. Files within the specified directory that match a certain suffix (as defined by another parameter, "pattern") will be aggregated and processed. The resulting training dataset will be saved with the filename provided in this parameter.
 
 `--ms2_method`: This parameter determines the metric used for DeepGP. Options are “cos_sqrt”, “cos”, and “pcc”, representing cosine similarity with a square root transformation, cosine similarity, and Pearson correlation coefficient, respectively.
 
