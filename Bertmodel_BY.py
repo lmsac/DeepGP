@@ -8,8 +8,6 @@ from fastNLP.core.metrics import MetricBase,seq_len_to_mask
 import GNN_global_representation
 import GNN_edge_regression
 from utils import *
-import ipdb
-#增加：糖基化结构用dgl的图结构表示（node_index,masses.glyco_process)--写GNN作为糖的全局表示
 Ablation="GIN"
 loc=True
 GIN_hidden_dim=64
