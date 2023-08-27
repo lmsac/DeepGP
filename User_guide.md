@@ -123,11 +123,11 @@ The description of the parameters of the command line:
 
 We have uploaded this trained model to [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q) and the model will also be made publicly accessible [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/). These models are labeled as “human”, “mouse”, and “human&mouse”. The “human” model was trained using human datasets, “mouse” was trained with mouse datasets, and “human&mouse” was trained using a combination of both human and mouse datasets.
 
-It takes about 1 second to predict 40 spectra on a single RTX 3090 GPU. The median cosine similarity between the predicted spectra and experimental spectra is 0.97.
+It takes about 1 second to predict 40 spectra on a single RTX 3090 GPU.
 ### Glycopeptide iRT: pre-processing, calibration, training, and prediction
-(1)	Pre-processing 
-Pre-processing code is the same for the MS/MS prediction.
-For the RT calibration process, which should be carried out on multiple datasets, we provide three mouse datasets as examples. The large demo data corresponding to these examples has been uploaded to [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k) and will also be made publicly accessible on the GitHub 'Releases' page.[DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/). You can use these datasets as a reference for your own iRT process.
+(1)	Pre-processing: Pre-processing code is the same for the MS/MS prediction.
+
+For the RT calibration process, which should be carried out on multiple datasets, we provide three mouse datasets as examples. The large demo data corresponding to these examples has been uploaded to [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k) and will also be made publicly accessible on the [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/). You can use these datasets as a reference for your own iRT process.
 ```
 python 1_dataset_format.py --datafold D:/DeepGP_code/data/mouse/PXD005411/ --dfname pGlycoDB-GP-FDR-Pro_PXD005411.txt --mgfdatafold MSConvert_mgf_PXD005411 --output_name PXD005411_MouseBrain_rt_1st.csv  --dup Drop_duplicated  --mgfsourceorign MsConvert
 ```
@@ -150,11 +150,12 @@ The description of the parameters of the command line:
 `--output_name`: The name of the output file that will store the calibrated retention time for all the files. This output file is for subsequent retention calibration during model training.
 
 Note: RT calibration is performed using the LOWESS method, with the parameters set as frac:0.2, it:2. After calibration, it’s recommended to review the output calibration plot (“RT_calibration_plot.pdf”) and tune the calibration parameters if necessary.
+
 Note: For each input file, a corresponding output file with the calibrated retention time is generated, denoted by adding the suffix (“_adjust.csv”).
 
 (3)	Model training
 
-For ease of use, users have the option to utilize our provided trained model for immediate testing, thereby bypassing the model training phase. We have uploaded this trained model to [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q) and the model will also be made publicly accessible [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/).
+For ease of use, users have the option to utilize our provided trained model for immediate testing, thereby bypassing the model training phase. We have uploaded this trained model to [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q) and the model will also be made publicly accessible on the [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/).
 
 ```
 python 2_train_rt.py  --irt yes  --irt_csv D:/DeepGP_code/data/mouse/All_adjust_irt.csv  --task_name demo_rt --folder_path D:/DeepGP_code/data/mouse/  --pattern *_rt_1st.csv --testdata PXD005411  --device 0  --trainpathcsv mouse_train_irt_1st_combine.csv  --model_ablation DeepFLR --DeepFLR_modelpath    D:/DeepGP_code/model/DeepFLR/best__2deepchargeModelms2_bert_mediancos_2021-09-20-01-17-50-729399
@@ -178,6 +179,8 @@ python 3_replace_predict_rt.py  --datafold D:/DeepGP_code/data/mouse/PXD005411/ 
 The description of the parameters for the command line is consistent with those used in `3_replace_predict_byBY.py`.
 
 For retention time prediction, the “mouse_rt” model has been specifically trained using mouse datasets. This model is utilized in the current process for making retention time predictions. We have uploaded this trained model to [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q) and the model will also be made publicly accessible [DeepGP GitHub Release Page](https://github.com/lmsac/DeepGP/releases/).
+
 It takes 38 seconds to predict iRT for 6254 spectra on a single RTX 3090 GPU.
 
+# Contact
 All the demo data and code are provided. A sentence with gray background indicates it is a sentence of code. If you have any further questions, please don't hesitate to ask us via: liang_qiao@fudan.edu.cn. You could also go to the homepage of DeepGP on GitHub to ask a question.
