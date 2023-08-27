@@ -3,12 +3,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from dgl.nn.pytorch.conv import GINConv,GraphConv,GATConv
-import ipdb
-# from dgl.nn.pytorch.conv import GraphConv
 from dgl.nn.pytorch.glob import SumPooling
 from utils import *
-#因为要做全局表示，就没有训练，可以加上COMPLEX,HYBRID之类的label，做分类任务
-#numberofglycos不用特别大
 class MLP(nn.Module):
     """Construct two-layer MLP-type aggreator for GIN model"""
 
