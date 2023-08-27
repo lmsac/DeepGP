@@ -2,15 +2,10 @@ import numpy as np
 import pandas as pd
 import os
 import os,sys
-import ipdb
 import sys
 sys.path.append('..')
 import masses
 from utils import *
-#糖基化顶替原来磷酸化的位置
-#但是糖基化有不同的结构，用1代替后，还是要制定结构并计算组成
-#将training_dataset.csv转化为training_dataset.json
-#需要验证
 MAXFICHARGE = int(num_col/12)
 # ---------------------- decoration processing------------------------#
 def countdecoration(presequence):
