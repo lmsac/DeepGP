@@ -1,11 +1,9 @@
 #只做谱图预测，对于已经训练好的模型，输入数据进行预测
 from fastNLP import Tester
 from preprocess import *
-# import fastNLP
 from transformers import BertConfig,RobertaConfig
 from model_gly import *
 from Bertmodel import ModelbyBYms2_bert
-import ipdb
 from utils import *
 import os
 from pathlib import Path
