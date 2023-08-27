@@ -5,7 +5,6 @@ from preprocess import PPeptidePipebyBY
 from torch.optim.lr_scheduler import StepLR,ReduceLROnPlateau
 from model_gly import *
 from Bertmodel import ModelbyBYms2_bert
-import ipdb
 import pandas as pd
 from pathlib import Path
 from utils import *
