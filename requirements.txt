@@ -1,0 +1,11 @@
+bidict @ file:///tmp/build/80754af9/bidict_1607541094382/work
+dgl==1.0.1+cu113
+FastNLP @ git+http://gitee.com/fastnlp/fastNLP@972185dc6cb7d5b9f4c51cb8a71e1a0fb8969ec7
+GitPython==3.1.11
+ipdb==0.13.9
+pandas==1.2.0
+pytorch-lightning==2.0.6
+pytorch-memlab==0.2.4
+torch==1.12.1+cu113
+transformers==4.12.5
+numpy==1.21.5
