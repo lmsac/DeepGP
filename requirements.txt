@@ -1,6 +1,7 @@
-bidict @ file:///tmp/build/80754af9/bidict_1607541094382/work
+bidict==0.22.0
+pyteomics==4.4.2
 dgl==1.0.1+cu113
-FastNLP @ git+http://gitee.com/fastnlp/fastNLP@972185dc6cb7d5b9f4c51cb8a71e1a0fb8969ec7
+FastNLP==0.6.0
 GitPython==3.1.11
 ipdb==0.13.9
 pandas==1.2.0
