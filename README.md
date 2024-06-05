@@ -41,6 +41,6 @@ This demo data is for clear and comprehensive presentation of iRT pre-processing
 For further details, please refer to the User Guide.
 
 # Post analysis
-We also present the post-analysis code for the re-identification in the folder “Post_analysis”.
+We also present the post-analysis code for the re-identification in the [main folder/Post_analysis]().
 
-The demo data for post analysis is available at the [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k).
+The demo data for post analysis is available at the [Google Drive](https://drive.google.com/drive/folders/1FGRUSyV-_pBYnTG8tqaY2594TSKY8e-9).
