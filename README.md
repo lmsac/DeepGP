@@ -1,5 +1,5 @@
 # DeepGP
-DeepGP will be publicly available upon its publication. 
+DeepGP is a deep learning framework for the prediction of MS/MS spectra and retention time of glycopeptides. 
 # Tutorial
 ## User Guide
 For detailed step-by-step instructions on how to get started with DeepGP, please refer to [User_Guide.md]() available in the [main folder]().
@@ -17,7 +17,7 @@ Demo Data Description: Detailed description of the demo data.
 Step-by-Step Instructions: Comprehensive guide to help you run and understand DeepGP.
 
 # Model
-The model is available at the [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q). Upon official publication, the model will also be made publicly accessible on the GitHub 'Releases' page.
+The model is available at the [Google Drive](https://drive.google.com/drive/folders/1J4CKnsrikETNgcLj9xL5eRjWqC0oQx8Q). 
 
 Here are the trained DeepGP models. These models are organized into five files, each denoted by the following names: DeepFLR, human, mouse, human&mouse and mouse_rt.
 
@@ -34,13 +34,13 @@ mouse_rt: The is the DeepGP model for retention time prediction trained with mou
 For further details, please refer to the User Guide.
 
 # Demo data 2
-The demo data for iRT prediction is available at the [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k). The demo data will also be made publicly accessible on the GitHub 'Releases' page.
+The demo data for iRT prediction is available at the [Google Drive](https://drive.google.com/drive/folders/1ysrME3schgZHtxB4JL114MrvyNnXx6_k). 
 
 This demo data is for clear and comprehensive presentation of iRT pre-processing, calibration, model training, and prediction. It includes three relatively large mouse datasets.
 
 For further details, please refer to the User Guide.
 
 # Post analysis
-We also present the post-analysis code for the re-identification in the [main folder/Post_analysis]().
+We also present the post-analysis code for the re-identification in the [main folder/Post_analysis](). For detailed step-by-step instructions on how to perform post analysis, please refer to [User_guide_post_analysis.docx]() available in the [main main folder/Post_analysis]().
 
-The demo data for post analysis is available at the [Google Drive](https://drive.google.com/drive/folders/1FGRUSyV-_pBYnTG8tqaY2594TSKY8e-9).
+The demo data for post analysis is available at the [Google Drive](https://drive.google.com/drive/folders/1FGRUSyV-_pBYnTG8tqaY2594TSKY8e-9). 
