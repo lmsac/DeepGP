@@ -41,6 +41,6 @@ This demo data is for clear and comprehensive presentation of iRT pre-processing
 For further details, please refer to the User Guide.
 
 # Post analysis
-We also present the post-analysis code for the re-identification in the [main folder/Post_analysis](). For detailed step-by-step instructions on how to perform post analysis, please refer to [User_guide_post_analysis.docx]() available in the [main main folder/Post_analysis]().
+We also present the post-analysis code for the re-identification in the [main folder/Post_analysis](https://github.com/yuz2011/DeepGP/tree/main/Post_analysis). For detailed step-by-step instructions on how to perform post analysis, please refer to [User_guide_post_analysis.docx](https://github.com/yuz2011/DeepGP/blob/main/Post_analysis/User_guide_post_analysis.docx) available in the [main main folder/Post_analysis](https://github.com/yuz2011/DeepGP/tree/main/Post_analysis).
 
 The demo data for post analysis is available at the [Google Drive](https://drive.google.com/drive/folders/1FGRUSyV-_pBYnTG8tqaY2594TSKY8e-9). 
