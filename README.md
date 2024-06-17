@@ -2,7 +2,7 @@
 DeepGP is a deep learning framework for the prediction of MS/MS spectra and retention time of glycopeptides. 
 # Tutorial
 ## User Guide
-For detailed step-by-step instructions on how to get started with DeepGP, please refer to [User_guide.md]() available in the [main folder]().
+For detailed step-by-step instructions on how to get started with DeepGP, please refer to [User_guide.md](main folder/User_guide.md) available in the [main folder]().
 
 ## What's Inside User Guide
 
