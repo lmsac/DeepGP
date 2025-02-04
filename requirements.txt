@@ -9,4 +9,4 @@ pytorch-lightning==2.0.6
 pytorch-memlab==0.2.4
 torch==1.12.1+cu113
 transformers==4.12.5
-numpy==1.21.5
+numpy==1.18.5
